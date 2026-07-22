@@ -1,3 +1,7 @@
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,61 +15,9 @@ body {
     line-height: 1.6;
 }
 
-/* menu */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 15px 30px;
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: 10px auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    flex-wrap: wrap;
-}
-
-.logo a {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #0084ff;
-    text-decoration: none;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: all 0.2s;
-}
-
-nav ul a:hover {
-    color: #24afff;
-    background: #f0edf9;
-}
-
-nav ul a.activo {
-    color: #ff6d18;
-    background: #f0edf9;
-    font-weight: bold;
-}
-
-/* 
-   separador de los bordes
-    */
-section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
+img {
+    display: block;
+    max-width: 100%;
 }
 
 h1,
@@ -79,21 +31,149 @@ h2 span {
     color: #24afff;
 }
 
-.subtitulo {
-    color: #666;
-    margin-bottom: 30px;
-}
-.pagina{
-    margin: 0px;
-    padding: 50px;
+
+/* =========================================
+   MENÚ DE NAVEGACIÓN
+   ========================================= */
+
+header {
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 15px 30px;
+
     display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* fondo de la imagen */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul a {
+    display: inline-block;
+    padding: 8px 14px;
+
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+nav ul a:hover {
+    color: #24afff;
+    background: #f0edf9;
+}
+
+nav ul a.activo {
+    color: #ff6d18;
+    background: #f0edf9;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   SECCIONES GENERALES
+   ========================================= */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.pagina > h1,
+.pagina > h2 {
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: -25px;
+    margin-bottom: 10px;
+    color: #666;
+    text-align: center;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background: #24afff;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid #24afff;
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #0084ff;
+    border-color: #0084ff;
+}
+
+.btn-secundario {
+    background: transparent;
+    color: #24afff;
+}
+
+.btn-secundario:hover {
+    background: #24afff;
+    color: white;
+}
+
+
+/* =========================================
+   PÁGINA DE INICIO
+   ========================================= */
+
 .hero {
+    min-height: 500px;
+
     display: flex;
     align-items: center;
     gap: 40px;
@@ -102,55 +182,75 @@ h2 span {
 
 .hero-texto {
     flex: 1;
+    min-width: 280px;
 }
 
 .hero-texto h1 {
-    font-size: 2.8rem;
     margin-bottom: 10px;
+    font-size: 2.8rem;
+    line-height: 1.2;
 }
 
 .hero-texto p {
-    font-size: 1.1rem;
-    color: #555;
     margin-bottom: 20px;
+    color: #555;
+    font-size: 1.1rem;
 }
 
 .hero-imagen {
     flex: 1;
+    min-width: 280px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .hero-imagen img {
     width: 100%;
     max-width: 500px;
+    height: 340px;
+
+    object-fit: cover;
     border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* ============================================
-   GRID DE TARJETAS
-   ============================================ */
+
+/* =========================================
+   SERVICIOS DESTACADOS
+   ========================================= */
+
+.destacados > h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .grid-3 {
+    width: 100%;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
 }
 
 .card {
-    background: white;
     padding: 25px 20px;
-    border-radius: 16px;
+
+    background: white;
     border: 1px solid #eee;
+    border-radius: 16px;
     text-align: center;
-    transition: all 0.2s;
+
+    transition: 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card .icono {
-    font-size: 3rem;
     margin-bottom: 10px;
+    font-size: 3rem;
 }
 
 .card h3 {
@@ -158,79 +258,535 @@ h2 span {
 }
 
 .card p {
-    color: #555;
     margin-bottom: 10px;
+    color: #555;
 }
 
 .card a {
     color: #6c3fe0;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .card a:hover {
     text-decoration: underline;
 }
 
-/* servicios  */
-.testimonio {
+
+/* =========================================
+   PÁGINA DE SERVICIOS
+   ========================================= */
+
+.servicio-detalle {
+    width: 100%;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
     background: white;
-    padding: 40px;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.servicio-detalle img {
+    width: 50%;
+    height: 320px;
+
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.servicio-detalle > div {
+    width: 50%;
+}
+
+.servicio-detalle h2 {
+    color: #0084ff;
+}
+
+.servicio-detalle p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.servicio-detalle ul {
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+.servicio-detalle li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.servicio-detalle.inverso {
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================
+   PÁGINA NOSOTROS
+   ========================================= */
+
+.nosotros-grid {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nosotros-texto {
+    flex: 1;
+    padding: 30px;
+
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.nosotros-texto h2 {
+    margin-top: 22px;
+    color: #0084ff;
+}
+
+.nosotros-texto h2:first-child {
+    margin-top: 0;
+}
+
+.nosotros-texto p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.nosotros-texto ul {
+    list-style: none;
+}
+
+.nosotros-texto li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.nosotros-imagen {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   EQUIPO
+   ========================================= */
+
+.miembro {
+    padding: 25px 20px;
+
+    background: white;
+    border: 1px solid #eee;
     border-radius: 16px;
     text-align: center;
-    border: 1px solid #eee;
-    margin: 20px auto;
+
+    transition: 0.2s;
 }
 
-.testimonio blockquote {
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #333;
+.miembro:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.testimonio cite {
-    display: block;
-    margin-top: 10px;
-    color: #6c3fe0
+.miembro img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f0edf9;
 }
 
+.miembro h3 {
+    margin-bottom: 5px;
+}
+
+.miembro p {
+    color: #0084ff;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PÁGINA DE CONTACTO
+   ========================================= */
 
 .contacto {
-    padding: 50px;
+    min-height: calc(100vh - 110px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
-    background: #f5f5f5;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contenedor h2 {
+    font-size: 2rem;
+}
+
+.contenedor > p {
+    margin-bottom: 25px;
+    color: #555;
 }
 
 .formulario {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
+    gap: 15px;
 }
 
 .formulario input,
 .formulario select,
 .formulario textarea {
-    padding: 10px;
+    padding: 12px 14px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.formulario input {
+    width: calc(50% - 8px);
+}
+
+.formulario select {
+    width: 100%;
 }
 
 .formulario textarea {
     width: 100%;
-    max-width: 500px;
-    height: 100px;
+    height: 130px;
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: #24afff;
 }
 
 .formulario button {
+    padding: 11px 24px;
+
     background: #ff4081;
     color: white;
+    font-weight: bold;
+
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
 .formulario button:hover {
     background: #e91e63;
+}
+
+
+/* =========================================
+   PÁGINA DE PERFIL
+   ========================================= */
+
+.perfil-card {
+    width: 100%;
+    max-width: 850px;
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.perfil-card > img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f0edf9;
+}
+
+.perfil-info {
+    flex: 1;
+}
+
+.perfil-info h2 {
+    text-transform: capitalize;
+}
+
+.perfil-info .rol {
+    margin-bottom: 10px;
+    color: #0084ff;
+    font-weight: bold;
+}
+
+.perfil-info > p {
+    color: #555;
+}
+
+.perfil-stats {
+    margin-top: 20px;
+}
+
+.perfil-stats h3 {
+    margin-bottom: 12px;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.habilidades span {
+    padding: 7px 13px;
+
+    background: #f0edf9;
+    color: #6c3fe0;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    border-radius: 20px;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.redes a {
+    color: #555;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #24afff;
+}
+
+
+/* =========================================
+   TESTIMONIO
+   ========================================= */
+
+.testimonio {
+    margin: 20px auto;
+    padding: 40px;
+
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.testimonio blockquote {
+    color: #333;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.testimonio cite {
+    display: block;
+    margin-top: 10px;
+    color: #6c3fe0;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (max-width: 850px) {
+
+    header {
+        width: 90%;
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-texto,
+    .hero-imagen {
+        flex: 100%;
+    }
+
+    .hero-texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio-detalle,
+    .servicio-detalle.inverso,
+    .nosotros-grid,
+    .perfil-card {
+        flex-direction: column;
+    }
+
+    .servicio-detalle img,
+    .servicio-detalle > div {
+        width: 100%;
+    }
+
+    .nosotros-texto,
+    .nosotros-imagen {
+        width: 100%;
+    }
+
+    .perfil-card {
+        text-align: center;
+    }
+
+    .habilidades,
+    .redes {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li,
+    nav ul a {
+        width: 100%;
+    }
+
+    nav ul a {
+        text-align: center;
+    }
+
+    section {
+        width: 100%;
+        padding: 40px 18px;
+    }
+
+    .pagina {
+        padding: 40px 18px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-imagen img {
+        height: 250px;
+    }
+
+    .botones {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-detalle,
+    .nosotros-texto,
+    .contenedor,
+    .perfil-card {
+        padding: 22px 18px;
+    }
+
+    .servicio-detalle img {
+        height: 230px;
+    }
+
+    .nosotros-imagen img {
+        height: 300px;
+    }
+
+    .formulario input {
+        width: 100%;
+    }
+
+    .formulario button {
+        width: 100%;
+    }
+
+    .perfil-card > img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .redes {
+        flex-direction: column;
+    }
 }
